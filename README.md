@@ -6,6 +6,17 @@ Machine Learning Algorithm and Natural language processing
 
 **Problem Statement**
 
+The problem at hand consists of two subtasks:
+
+- Sentiment Analysis in Twitter:
+
+_Given a message containing a marked instance of a word or a phrase, determine whether that instance is positive, negative or neutral in that context._
+
+-  Sentence Level Sentiment Analysis :
+
+_Given a message, decide whether the message is of positive, negative, or neutral sentiment. For messages conveying both a positive and negative sentiment, whichever is the stronger sentiment should be chosen._
+
+
 **GUI** 
 
 ![Picture2](https://user-images.githubusercontent.com/32463263/93847300-34eda300-fcc4-11ea-8c9f-e4b0e91ba993.png)
