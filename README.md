@@ -68,7 +68,6 @@ class Splash(Toplevel):
 
 *Extracting Tweets From Twitter*
 
-![Picture12](https://user-images.githubusercontent.com/32463263/93847838-b7c32d80-fcc5-11ea-9942-11b19654ba44.png)
 
 *Naive bayes Classifier Implementation.*
 
