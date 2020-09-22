@@ -46,7 +46,22 @@ _Given a message, decide whether the message is of positive, negative, or neutra
 ![image](https://user-images.githubusercontent.com/32463263/93846826-cbb96000-fcc2-11ea-93f6-49b5d6a816b7.png)
 
 *Making A Splash Screen to Introduce the Application Name*
-
+```
+class Splash(Toplevel):
+        def __init__(self, parent):
+            Toplevel.__init__(self, parent)
+            self.title("Welcome")
+            self.geometry("500x500+450+100")
+            lblwelcome=Label(self, text ="Sentiment Analysis", font = ('arial', 20, 'bold'))
+            lblwelcome1=Label(self, text =" Using ", font = ('arial', 20, 'bold'))
+            lblwelcome2=Label(self, text =" Machine Learning Algorithm", font = ('arial', 20, 'bold'))
+        
+            lblwelcome.pack(pady = 1)
+            lblwelcome1.pack(pady = 1)
+            lblwelcome2.pack(pady = 1)
+            
+            self.update()
+```
 
 
 *Building a Root Window (container) as a Base Window*
