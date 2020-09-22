@@ -47,27 +47,50 @@ _Given a message, decide whether the message is of positive, negative, or neutra
 
 *Making A Splash Screen to Introduce the Application Name*
 
-class Splash(Toplevel):
-        def __init__(self, parent):
-            Toplevel.__init__(self, parent)
-            self.title("Welcome")
-            self.geometry("500x500+450+100")
-            lblwelcome=Label(self, text ="Sentiment Analysis", font = ('arial', 20, 'bold'))
-            lblwelcome1=Label(self, text =" Using ", font = ('arial', 20, 'bold'))
-            lblwelcome2=Label(self, text =" Machine Learning Algorithm", font = ('arial', 20, 'bold'))
-        
-            lblwelcome.pack(pady = 1)
-            lblwelcome1.pack(pady = 1)
-            lblwelcome2.pack(pady = 1)
-            
-            self.update()
+
 
 *Building a Root Window (container) as a Base Window*
 
 ![Picture11](https://user-images.githubusercontent.com/32463263/93847789-8f3b3380-fcc5-11ea-924d-05212e764a93.png)
 
 *Extracting Tweets From Twitter*
+```
+`import tweepy
 
+from tweepy.streaming import StreamListener
+
+from tweepy import OAuthHandler
+
+from tweepy import Stream
+
+import json
+
+import time
+
+import pandas as pd
+    
+access_token = "1085460732727050241-HFKwiRJtEjFQcuFzLuIEQVo3072LPw"
+access_secret = "L9ltIAi8F49ywLItCPPNMuQEOwkGOaqsYtVHgznX8Tf6S"
+consumer_key = "z4b4IalHycnih8SB951QeSeCT"
+consumer_secret = "6EcfdQmoppfZQzobMBUSREwLI4vBZTI8QFXnIWuy7Aepw2dyJS"
+auth = OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_secret)
+api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+searchquery = s2
+users =tweepy.Cursor(api.search,q=searchquery).items()
+count = 0
+start = 0
+errorCount=0
+waitquery = 100      #this is the number of searches it will do before resting
+waittime = 2.0          # this is the length of time we tell our program to rest
+total_number = 10   #this is the total number of queries we want
+justincase = 1         #this is the number of minutes to wait just in case twitter throttles us
+text = [1] * total_number
+secondcount = 0  
+`
+
+
+```
 
 *Naive bayes Classifier Implementation.*
 
